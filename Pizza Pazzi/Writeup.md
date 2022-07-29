@@ -16,7 +16,7 @@ Listening in on the conversation
 
 This part of the challenge was initially broken when I attempted the challenge so I have moved this section up to its proper place. 
 
-We are given an APK file. Going to google, we see that there are two methods to tackle APK files. First we can simply extract the files from the apk. We use 
+We are given an APK file. Going to google, we see that we can simply extract the files from the apk. We use 
 
 ```bash
 apktool d pizza-pazzi.apk
