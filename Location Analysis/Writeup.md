@@ -89,4 +89,4 @@ You can find the C++ script named as “RetreiveData.cpp” and the bash script 
 
 If we graph our resulting csv, we get a massive graph and if we zoom in a bit, we see the following message! Our flag is CTF{DHXW8neRvQU9PUCfPW5k}
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f07cec5-b66b-472f-947a-4f2168b59d02/Untitled.png)
+![Graph that shows the flag](Untitled.png)
