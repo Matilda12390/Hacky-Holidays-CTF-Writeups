@@ -67,13 +67,13 @@ java -jar jd-gui-1.6.6.jar
 
 We can then load our DigitalID.jar file inside the GUI and we see a bunch of folders and files we can examine. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/546c149f-0539-47d2-8b64-c274b42108b4/Untitled.png)
+![homepage of the GUI](JDGUI.png)
 
 The main files of interest are the files inside be.deloitte.digitalID since those are the app specific files while the rest are from included libraries and default android stuff. 
 
 The majority of files are pretty unremarkable, except for the MainActivity.class file. We can clearly see that previous CTF{redacted} in here
 
-![VirtualBox_Kali-Linux-2022.2-virtualbox-amd64_29_07_2022_21_10_07.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd80a2c6-9876-42fc-9c5f-f44e2d0c79df/VirtualBox_Kali-Linux-2022.2-virtualbox-amd64_29_07_2022_21_10_07.png)
+![Screenshot of main activity code](MainActivity.png)
 
 So reading through the file, I get the impression that what is happening here is
 
