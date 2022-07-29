@@ -85,3 +85,8 @@ So we have the hint that “every second counts!” which from examining the red
 ```
 
 So, presumably, we need to graph out how the data changes over time. So the easiest way to do that is to create a script to export all the data into a .csv for easy graphing. I did this scripting in two parts. First I made a C++ script to get all the coordinates at one point in time and then I made a bash script to run that C++ program every second for 60 seconds and place the output it gets into a csv file.
+You can find the C++ script named as “RetreiveData.cpp” and the bash script as “GetDataOverTime.sh” in this github repo. 
+
+If we graph our resulting csv, we get a massive graph and if we zoom in a bit, we see the following message! Our flag is CTF{DHXW8neRvQU9PUCfPW5k}
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f07cec5-b66b-472f-947a-4f2168b59d02/Untitled.png)
