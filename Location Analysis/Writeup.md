@@ -59,3 +59,29 @@ GET _flag
 $25
 CTF{DGErbbodqEeHQhjeDs8g}
 ```
+
+# WHAT IS GOING IN WITH THE AI?
+
+---
+
+Medium | PPC | 200 points 
+
+---
+
+## Description
+
+Can you find out what the AI is doing? The city is almost paralized with fear, every second counts!
+
+---
+
+So we have the hint that “every second counts!” which from examining the redis store over time, seems to mean that the data in this redis store is changing every second. We can also see that the data in the redis store consists of a number plate and a longitude and latitude coordinate as the following data sample shows.
+
+```bash
+
+2) "aa6c480e-1a14-4cc0-80c1-2e9622e1aabc"                                                            
+ 3) 1) "$"                                                                                             
+    2) "{\"number_plate\":\"PI-65-GB\",\"longitude\":-122,\"latitude\":-75}"                           
+
+```
+
+So, presumably, we need to graph out how the data changes over time. So the easiest way to do that is to create a script to export all the data into a .csv for easy graphing. I did this scripting in two parts. First I made a C++ script to get all the coordinates at one point in time and then I made a bash script to run that C++ program every second for 60 seconds and place the output it gets into a csv file.
